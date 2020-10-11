@@ -10,6 +10,23 @@ Nmap sử dụng những kỹ thuật set các cờ trong gói tin IP để xác
 
 ## 2. Cài đặt Nmap
 
+Nmap thường được cài đặt sẵn trên các distro Linux chuyên về bảo mật như Kali Linux,...
+
+Người dùng có thể tải về và cài đặt Nmap trên các hệ điều khác như Ubuntu, Window, Centos 7...
+
+  + Ubuntu
+  ```
+  sudo apt-get install nmap
+  ```
+  
+  + Centos 7
+  ```
+  yum install nmap
+  ```
+  
+  + Window
+   https://nmap.org/download.html
+
 ## 3. Một số tham số cơ bản của Nmap
 
 ## 4. Sử dụng Nmap để scan
