@@ -30,7 +30,7 @@ Nmap cung cấp giao diện dòng lệnh, người dùng có thể tải về v�
    
  Ngoài Nmap còn có Zenmap - giao diện đồ họa của Nmap. Giao diện Zenmap cung cấp cho người dùng nhiều tùy chọn quét khác nhau, khả năng lưu kết quả quả những lần scan và so sánh chúng. Xem bản đồ cấu trúc mạng cũng như các cổng đang chạy trên máy chủ...
  
- https://lcom.static.linuxfound.org/images/stories/zenmap.png
+ https://www.linux.com/images/stories/zenmap.png
  
  Giao diện nmap
 
