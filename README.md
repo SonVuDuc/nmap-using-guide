@@ -12,20 +12,27 @@ Nmap sử dụng những kỹ thuật set các cờ trong gói tin IP để xác
 
 Nmap thường được cài đặt sẵn trên các distro Linux chuyên về bảo mật như Kali Linux,...
 
-Người dùng có thể tải về và cài đặt Nmap trên các hệ điều khác như Ubuntu, Window, Centos 7...
+Nmap cung cấp giao diện dòng lệnh, người dùng có thể tải về và cài đặt Nmap trên các hệ điều khác như Ubuntu, Window, Centos 7...
 
   + Ubuntu
   ```
   sudo apt-get install nmap
   ```
   
-  + Centos 7
+  + Centos 7nmap
   ```
   yum install nmap
   ```
   
   + Window
+  
    https://nmap.org/download.html
+   
+ Ngoài Nmap còn có Zenmap - giao diện đồ họa của Nmap. Giao diện Zenmap cung cấp cho người dùng nhiều tùy chọn quét khác nhau, khả năng lưu kết quả quả những lần scan và so sánh chúng. Xem bản đồ cấu trúc mạng cũng như các cổng đang chạy trên máy chủ...
+ 
+ https://lcom.static.linuxfound.org/images/stories/zenmap.png
+ 
+ Giao diện nmap
 
 ## 3. Một số tham số cơ bản của Nmap
 
