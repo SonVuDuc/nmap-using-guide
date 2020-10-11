@@ -36,7 +36,16 @@ Nmap cung cấp giao diện dòng lệnh, người dùng có thể tải về v�
 
 ## 3. Một số lệnh và tham số cơ bản của Nmap
 
-Một trong những mục đích của Nmap là tìm các host đang online. Thông thường khi kiểm tra 1 host có online hay không, lệnh **ping [địa chỉ ip]** sẽ được dùng
+Một trong những mục đích của Nmap là tìm các host đang online. Thông thường khi kiểm tra 1 host có online hay không, lệnh **ping** sẽ được dùng. Tuy nhiên lệnh ping chỉ kiểm tra được 1 host. Nmap là khắc phục điều đó, quét được nhiều host và cung cấp nhiều tùy chọn hơn thông qua set các cờ
 
+Nmap có thể quét 1 địa chỉ IP hoặc một dải địa chỉ IP. VD:
+
+```
+nmap 192.168.10.1
+```
+hoặc
+```
+nmap 192.168.10.0/24
+```
 ## 4. Sử dụng Nmap để scan
 
