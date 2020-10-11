@@ -47,5 +47,19 @@ hoặc
 ```
 nmap 192.168.10.0/24
 ```
+
+Nmap có thể quét theo một list các địa chỉ IP có sẵn. VD
+```
+nmap -iL IP_List.txt
+```
+
+### Các tham số của lệnh Nmap
+
+  + -sn: đơn giản là gửi gói tin ICMP Echo Request đến host xem host có online hay không. VD: ```nmap -sn 192.168.10.1```  
+  
+  + -O: kiểm tra hệ điều hành của host. VD: ```nmap -O 192.168.10.1```
+  
+  + -
+
 ## 4. Sử dụng Nmap để scan
 
