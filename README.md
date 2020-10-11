@@ -32,11 +32,11 @@ Nmap cung cấp giao diện dòng lệnh, người dùng có thể tải về v�
  
 ![zenmap](https://user-images.githubusercontent.com/32956424/95675282-37b32800-0be0-11eb-8292-77dbf315cb22.png)
  
- Giao diện nmap
+ Giao diện Zenmap
 
-## 3. Một số tham số cơ bản của Nmap
+## 3. Một số lệnh và tham số cơ bản của Nmap
 
-
+Một trong những mục đích của Nmap là tìm các host đang online. Thông thường khi kiểm tra 1 host có online hay không, lệnh **ping [địa chỉ ip]** sẽ được dùng
 
 ## 4. Sử dụng Nmap để scan
 
