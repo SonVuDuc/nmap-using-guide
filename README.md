@@ -59,6 +59,8 @@ nmap -iL IP_List.txt
   
   + -O: kiểm tra hệ điều hành của host. VD: ```nmap -O 192.168.10.1```
   
+  + -sT (TCP Connect scan): thực hiện kết nối bằng giao thức TCP tới host với bắt tay 3 bước. Máy người dùng sẽ gửi gói tin SYN, nếu port mở thì máy đích sẽ trả lời bằng gói tin SYN + ACK. Khi đó máy người dùng sẽ gửi tiếp gói tin ACK để duy trì kết nối. Nếu máy đích trả lời bằng gói tin RST, tức là port đóng. Nếu không trả lời, tức là gói tin đã bị lọc. Nếu trả về gói tin ICMP cũng bị coi là lọc
+  
   + -
 
 ## 4. Sử dụng Nmap để scan
