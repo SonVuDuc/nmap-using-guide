@@ -93,7 +93,77 @@ nmap -iL IP_List.txt
   
   + **-sU (UDP Scan)**: Gửi đi gói tin UDP, nếu Receiver phản hồi lại gói tin UDP thì port mở. Nếu phản hồi là gói tin ICMP thì có thể port đóng hoặc bị lọc
   
-
-
+  
 ## 4. Sử dụng Nmap để scan
 
+Scan mạng local, có dải địa chỉ IP: 192.168.1.0/24
+
+Tiến hành scan 100 port thông dụng nhất và lưu kết quả vào file **output.txt**
+
+``` root@matumbaman:~# nmap -oN output.txt -F 192.168.1.0/24 ```
+
+Kết quả
+
+```
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-10-12 20:07 +07
+Nmap scan report for 192.168.1.1
+Host is up (0.0024s latency).
+Not shown: 94 closed ports
+PORT    STATE    SERVICE
+21/tcp  filtered ftp
+22/tcp  filtered ssh
+23/tcp  filtered telnet
+53/tcp  open     domain
+80/tcp  open     http
+443/tcp open     https
+MAC Address: 80:69:33:3E:53:2B (Unknown)
+
+Nmap scan report for 192.168.1.16
+Host is up (0.041s latency).
+Not shown: 87 filtered ports
+PORT      STATE  SERVICE
+5060/tcp  closed sip
+6646/tcp  closed unknown
+7070/tcp  closed realserver
+8000/tcp  closed http-alt
+8008/tcp  closed http
+8009/tcp  closed ajp13
+8080/tcp  closed http-proxy
+8081/tcp  closed blackice-icecap
+8443/tcp  closed https-alt
+8888/tcp  closed sun-answerbook
+9100/tcp  closed jetdirect
+9999/tcp  closed abyss
+10000/tcp closed snet-sensor-mgmt
+MAC Address: 08:78:08:7B:07:96 (Samsung Electronics)
+
+Nmap scan report for 192.168.1.17
+Host is up (0.0046s latency).
+Not shown: 96 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+8008/tcp open  http
+8009/tcp open  ajp13
+8443/tcp open  https-alt
+MAC Address: 90:CD:B6:80:DD:BB (Hon Hai Precision Ind.)
+
+Nmap scan report for 192.168.1.18
+Host is up (0.022s latency).
+Not shown: 96 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+8008/tcp open  http
+8009/tcp open  ajp13
+8443/tcp open  https-alt
+MAC Address: 94:53:30:AE:1F:E3 (Hon Hai Precision Ind.)
+
+Nmap scan report for 192.168.1.15
+Host is up (0.000019s latency).
+Not shown: 97 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+111/tcp open  rpcbind
+443/tcp open  https
+
+Nmap done: 256 IP addresses (5 hosts up) scanned in 66.63 seconds
+```
