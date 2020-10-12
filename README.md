@@ -48,7 +48,7 @@ hoặc một dải địa chỉ IP:
 nmap 192.168.10.0/24
 ```
 
-Nmape một khoảng địa chỉ IP:
+hoặc một khoảng địa chỉ IP:
 ```
 nmap 192.168.10.1-20
 ```
@@ -96,13 +96,14 @@ nmap -iL IP_List.txt
   
 ## 4. Sử dụng Nmap để scan
 
-Scan mạng local, có dải địa chỉ IP: 192.168.1.0/24
+Tiến hành scan mạng local, có dải địa chỉ IP: 192.168.1.0/24
 
-Tiến hành scan 100 port thông dụng nhất và lưu kết quả vào file **output.txt**
+**Scan 100 port thông dụng nhất** 
 
 ``` root@matumbaman:~# nmap -oN output.txt -F 192.168.1.0/24 ```
 
-Kết quả
+
+Lưu kết quả vào file **output.txt**. Kết quả
 
 ```
 Starting Nmap 7.60 ( https://nmap.org ) at 2020-10-12 20:07 +07
@@ -167,3 +168,16 @@ PORT    STATE SERVICE
 
 Nmap done: 256 IP addresses (5 hosts up) scanned in 66.63 seconds
 ```
+
+**Scan hệ điều hành của các host**
+
+``` root@matumbaman:~# nmap -oN output.txt -O 192.168.1.0/24 ```
+
+Kết quả
+
+```
+
+```
+
+
+
