@@ -38,14 +38,19 @@ Nmap cung cấp giao diện dòng lệnh, người dùng có thể tải về v�
 
 Một trong những mục đích của Nmap là tìm các host đang online. Thông thường khi kiểm tra 1 host có online hay không, lệnh **ping** sẽ được dùng. Tuy nhiên lệnh ping chỉ kiểm tra được 1 host. Nmap là khắc phục điều đó, quét được nhiều host và cung cấp nhiều tùy chọn hơn thông qua set các cờ
 
-Nmap có thể quét 1 địa chỉ IP hoặc một dải địa chỉ IP. VD:
+Nmap có thể quét 1 địa chỉ IP. VD:
 
 ```
 nmap 192.168.10.1
 ```
-hoặc
+hoặc một dải địa chỉ IP:
 ```
 nmap 192.168.10.0/24
+```
+
+Nmape một khoảng địa chỉ IP:
+```
+nmap 192.168.10.1-20
 ```
 
 Nmap có thể quét theo một list các địa chỉ IP có sẵn. VD
@@ -53,7 +58,13 @@ Nmap có thể quét theo một list các địa chỉ IP có sẵn. VD
 nmap -iL IP_List.txt
 ```
 
+
+
 ### Các tham số của lệnh Nmap
+
+  + **-p**: quét 1 port cụ thể hoặc một khoảng các port. VD quét port 22: ``` nmap -p 22 192.168.10.1```, quét khoảng port 1 - 100: ``` nmap -p 1-100 192.168.10.1```
+  
+  + **-F**:
 
   + **-sn**: đơn giản là gửi gói tin ICMP Echo Request đến Receiver xem host có online hay không. VD: ```nmap -sn 192.168.10.1```  
   
@@ -67,6 +78,10 @@ nmap -iL IP_List.txt
     - **-sN (NULL Scan)**: gói tin này không mang cờ.
     - **-sF (FIN Scan)**: cờ FIN thường được dùng khi kết thúc kết nối TCP
     - **-sX (XMAS Scan)**: gói tin mang cả 3 cờ PSH, URG và FIN
+    
+  + **-sA (ACK Scan)**: Kỹ thuật scan này chủ yếu để thăm dò tường lửa. Sender gửi gói tin có cờ ACK để xem phản hồi của Receiver, nếu không phản hồi thì port đã bị lọc, nếu phản hồi là gói tin RST thì là port không bị lọc
+  
+  + **-sU (UDP Scan)**: Gửi đi gói tin UDP, nếu Receiver phản hồi lại gói tin UDP thì port mở. Nếu phản hồi là gói tin ICMP thì có thể port đóng hoặc bị lọc
   
 
 ## 4. Sử dụng Nmap để scan
