@@ -63,6 +63,7 @@ nmap -iL IP_List.txt
 ### Các tham số của lệnh Nmap
 
   + **-p**: quét 1 port cụ thể hoặc một khoảng các port. VD quét port 22: ``` nmap -p 22 192.168.10.1``` 
+  
   Quét khoảng port 1 - 100: ``` nmap -p 1-100 192.168.10.1```
   
   + **-F**:
