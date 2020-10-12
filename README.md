@@ -169,15 +169,46 @@ PORT    STATE SERVICE
 Nmap done: 256 IP addresses (5 hosts up) scanned in 66.63 seconds
 ```
 
-**Scan hệ điều hành của các host**
+**Scan hệ điều hành của một host**
 
-``` root@matumbaman:~# nmap -oN output.txt -O 192.168.1.0/24 ```
+``` root@matumbaman:~# nmap -O 192.168.1.15 ```
 
 Kết quả
 
 ```
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-10-12 20:49 +07
+Nmap scan report for 192.168.1.15
+Host is up (0.0000050s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+111/tcp open  rpcbind
+443/tcp open  https
+902/tcp open  iss-realsecure
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32
+OS details: Linux 2.6.32
+Network Distance: 0 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 16.98 seconds
 
 ```
+Nmap hiển thị hệ điều hành là Linux 2.6.32
+
+**Scan một host không online 
+
+``` root@matumbaman:~# nmap -sn 192.168.1.77 ```
+
+Kết quả Nmap báo là host không online
+```
+Starting Nmap 7.60 ( https://nmap.org ) at 2020-10-12 20:50 +07
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.68 seconds
+
+```
+
 
 
 
