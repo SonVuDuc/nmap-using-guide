@@ -55,13 +55,19 @@ nmap -iL IP_List.txt
 
 ### Các tham số của lệnh Nmap
 
-  + -sn: đơn giản là gửi gói tin ICMP Echo Request đến host xem host có online hay không. VD: ```nmap -sn 192.168.10.1```  
+  + **-sn**: đơn giản là gửi gói tin ICMP Echo Request đến Receiver xem host có online hay không. VD: ```nmap -sn 192.168.10.1```  
   
-  + -O: kiểm tra hệ điều hành của host. VD: ```nmap -O 192.168.10.1```
+  + **-O**: kiểm tra hệ điều hành của host. VD: ```nmap -O 192.168.10.1```
   
-  + -sT (TCP Connect scan): thực hiện kết nối bằng giao thức TCP tới host với bắt tay 3 bước. Máy người dùng sẽ gửi gói tin SYN, nếu port mở thì máy đích sẽ trả lời bằng gói tin SYN + ACK. Khi đó máy người dùng sẽ gửi tiếp gói tin ACK để duy trì kết nối. Nếu máy đích trả lời bằng gói tin RST, tức là port đóng. Nếu không trả lời, tức là gói tin đã bị lọc. Nếu trả về gói tin ICMP cũng bị coi là lọc
+  + **-sT (TCP Full open scan)**: thực hiện kết nối bằng giao thức TCP tới Receiver với bắt tay 3 bước. Sender sẽ gửi gói tin SYN, nếu port mở thì Receiver sẽ trả lời bằng gói tin SYN + ACK. Khi đó Sender sẽ gửi tiếp gói tin ACK để duy trì kết nối. Nếu Receiver trả lời bằng gói tin RST, tức là port đóng. Nếu không trả lời, tức là gói tin đã bị lọc. Nếu trả về gói tin ICMP cũng bị coi là lọc
   
-  + -
+  + **-sS (TCP Half-open scan)**: cũng giống như Full open scan ở trên, nhưng thay vì Sender sẽ gửi gói tin ACK để duy trì kết nối, thì sẽ gửi gói tin RST để kết thúc kết nối luôn. Cơ chế phản hồi giống như Full open scan. Tuy nhiên cách scan này có thể qua mặt tường lửa hoặc tránh bị ghi lại
+  
+  + **Inverse TCP Flag scan**: là tên gọi các kỹ thuật scan như NULL Scan, XMAS Scan, FIN Scan... Sender sẽ gửi các gói tin TCP kèm các cờ đặc biệt, sự xuất hiện của các cờ này không đúng với kết nối thông thường, chủ yếu để thăm dò phản ứng của Receiver. Nếu Receiver phản hồi thì port mở hoặc port đã bị lọc. Nếu không phản hồi thì port đóng
+    - **-sN (NULL Scan)**: gói tin này không mang cờ.
+    - **-sF (FIN Scan)**: cờ FIN thường được dùng khi kết thúc kết nối TCP
+    - **-sX (XMAS Scan)**: gói tin mang cả 3 cờ PSH, URG và FIN
+  
 
 ## 4. Sử dụng Nmap để scan
 
