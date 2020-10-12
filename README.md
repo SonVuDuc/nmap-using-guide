@@ -78,7 +78,7 @@ nmap -iL IP_List.txt
   
   + **-O**: kiểm tra hệ điều hành của host. VD: ```nmap -O 192.168.10.1```
   
-  + **-sT (TCP Full open scan)**: thực hiện kết nối bằng giao thức TCP tới Receiver với bắt tay 3 bước. Sender sẽ gửi gói tin SYN, nếu port mở thì Receiver sẽ trả lời bằng gói tin SYN + ACK. Khi đó Sender sẽ gửi tiếp gói tin ACK để duy trì kết nối. Nếu Receiver trả lời bằng gói tin RST, tức là port đóng. Nếu không trả lời, tức là gói tin đã bị lọc. Nếu trả về gói tin ICMP cũng bị coi là lọc
+  + **-sT (TCP Full open scan)**: thực hiện kết nối bằng giao thức TCP tới Receiver với bắt tay 3 bước. Sender sẽ gửi gói tin SYN, nếu port mở thì Receiver sẽ trả lời bằng gói tin SYN + ACK. Khi đó Sender sẽ gửi tiếp gói tin ACK để duy trì kết nối. Nếu Receiver trả lời bằng gói tin RST, tức là port đóng. Nếu không trả lời, tức là gói tin đã bị lọc. Nếu trả về gói tin ICMP cũng bị coi là lọc.
   
   + **-sS (TCP Half-open scan)**: cũng giống như Full open scan ở trên, nhưng thay vì Sender sẽ gửi gói tin ACK để duy trì kết nối, thì sẽ gửi gói tin RST để kết thúc kết nối luôn. Cơ chế phản hồi giống như Full open scan. Tuy nhiên cách scan này có thể qua mặt tường lửa hoặc tránh bị ghi lại
   
@@ -197,7 +197,7 @@ Nmap done: 1 IP address (1 host up) scanned in 16.98 seconds
 ```
 Nmap hiển thị hệ điều hành là Linux 2.6.32
 
-**Scan một host không online 
+**Scan một host không online**
 
 ``` root@matumbaman:~# nmap -sn 192.168.1.77 ```
 
