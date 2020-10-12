@@ -62,11 +62,17 @@ nmap -iL IP_List.txt
 
 ### Các tham số của lệnh Nmap
 
-  + **-p**: quét 1 port cụ thể hoặc một khoảng các port. VD quét port 22: ``` nmap -p 22 192.168.10.1``` 
+  + **-p**: quét 1 port cụ thể hoặc một khoảng các port. VD:
   
-  Quét khoảng port 1 - 100: ``` nmap -p 1-100 192.168.10.1```
+  Quét port 22: ``` nmap -p 22 192.168.10.1``` 
   
-  + **-F**:
+  Quét khoảng port 1 - 100: ```nmap -p 1-100 192.168.10.1```
+  
+  + **-F**: quét 100 port thông dụng nhất. VD: ```nmap -F 192.168.10.1```
+  
+  + **-p-**: quét 65535 port. VD: ```nmap -p- 192.168.10.1```
+  
+  + **-oN**: scan và lưu kết quả vào file. VD: ```nmap -oN output.txt -p- 192.168.10.1```
 
   + **-sn**: đơn giản là gửi gói tin ICMP Echo Request đến Receiver xem host có online hay không. VD: ```nmap -sn 192.168.10.1```  
   
@@ -83,8 +89,11 @@ nmap -iL IP_List.txt
     
   + **-sA (ACK Scan)**: Kỹ thuật scan này chủ yếu để thăm dò tường lửa. Sender gửi gói tin có cờ ACK để xem phản hồi của Receiver, nếu không phản hồi thì port đã bị lọc, nếu phản hồi là gói tin RST thì là port không bị lọc
   
+  + **-sV**: quét các dịch vụ trên các port
+  
   + **-sU (UDP Scan)**: Gửi đi gói tin UDP, nếu Receiver phản hồi lại gói tin UDP thì port mở. Nếu phản hồi là gói tin ICMP thì có thể port đóng hoặc bị lọc
   
+
 
 ## 4. Sử dụng Nmap để scan
 
